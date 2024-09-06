@@ -14,7 +14,8 @@ namespace Interpreter.Expr.MathExpr
 
         public override int Calculate()
         {
-            return (operand.Calculate() + 1);
+            new AssignExpr(operand, new ConstExpr(operand.Calculate() + 1)).Calculate();
+            return (operand.Calculate() - 1);
         }
     }
 }

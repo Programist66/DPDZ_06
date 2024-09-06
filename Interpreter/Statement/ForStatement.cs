@@ -24,11 +24,11 @@ namespace Interpreter.Statement
 
         public void Execute()
         {
-            new ExprStatement(counter).Execute();
+            counter.Calculate();
             while (condition.Calculate() != 0) 
             {
                 statement.Execute();
-                new ExprStatement(new AssignExpr(counter.Left, operation)).Execute();
+                operation.Calculate();
             }
         }
     }

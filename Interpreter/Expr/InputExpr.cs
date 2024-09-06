@@ -10,8 +10,7 @@ namespace Interpreter.Expr
     {
         public int Calculate()
         {
-            int num;
-            Int32.TryParse(Console.ReadLine(), out num);
+            Int32.TryParse(Console.ReadLine(), out int num);
             return num;
         }
     }
